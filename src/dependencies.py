@@ -11,4 +11,4 @@ plt.rcParams['figure.figsize'] = (15, 8)
 
 # Modeling - Association Rule Mining
 from mlxtend.preprocessing import TransactionEncoder
-from mlxtend.frequent_patterns import fpgrowth
+from mlxtend.frequent_patterns import fpgrowth, association_rules
