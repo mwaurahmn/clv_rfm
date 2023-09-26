@@ -1,5 +1,6 @@
 # Data loading and preprocessing
 import pandas as pd
+import random
 
 # Visualization
 import seaborn as sns

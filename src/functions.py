@@ -46,13 +46,11 @@ def propose_bundles(customer_cart, rules, n = 3):
     A list of the proposed items (consequents).
     '''
     bundle = []
-    bundle_set = []
     for index, row in rules.iterrows():
         antecedents = set(row['antecedents'])
         if antecedents.issubset(customer_cart):
             consequents = set(row['consequents'])
             bundle.extend(consequents.difference(customer_cart))
-    for item in bundle:
-        if item not in bundle_set:
-            bundle_set.append(item)
+    bundle_set = set(bundle)
+    bundle_set = list(bundle_set)
     return bundle_set
